@@ -1,3 +1,6 @@
+import 'package:ch9_customscrollview_slivers/widgets/sliver_app_bar.dart';
+import 'package:ch9_customscrollview_slivers/widgets/sliver_list.dart';
+import 'package:ch9_customscrollview_slivers/widgets/sliver_grid.dart';
 import 'package:flutter/material.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -15,9 +18,14 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
+        elevation: 0.0,
       ),
-      body: SafeArea(
-        child: Container(),
+      body: const CustomScrollView(
+        slivers: [
+          SliverAppBarWidget(),
+          // SliverListWidget(),
+          // SliverGridWidget(),
+        ],
       ),
     );
   }
