@@ -23,7 +23,7 @@ class _MyHomePageState extends State<MyHomePage> {
       body: const CustomScrollView(
         slivers: [
           SliverAppBarWidget(),
-          // SliverListWidget(),
+          SliverListWidget(),
           // SliverGridWidget(),
         ],
       ),
