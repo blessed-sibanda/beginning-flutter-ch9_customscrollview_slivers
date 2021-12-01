@@ -5,6 +5,30 @@ class SliverGridWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return SliverSafeArea(
+      sliver: SliverGrid(
+        delegate: SliverChildBuilderDelegate(
+          (BuildContext context, int index) {
+            return Card(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const Icon(
+                    Icons.child_friendly,
+                    size: 48.0,
+                    color: Colors.amber,
+                  ),
+                  const Divider(),
+                  Text('Grid ${index + 1}'),
+                ],
+              ),
+            );
+          },
+          childCount: 12,
+        ),
+        gridDelegate:
+            const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3),
+      ),
+    );
   }
 }

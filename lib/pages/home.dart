@@ -24,7 +24,7 @@ class _MyHomePageState extends State<MyHomePage> {
         slivers: [
           SliverAppBarWidget(),
           SliverListWidget(),
-          // SliverGridWidget(),
+          SliverGridWidget(),
         ],
       ),
     );
