@@ -8,11 +8,10 @@ class SliverAppBarWidget extends StatelessWidget {
     return const SliverAppBar(
       backgroundColor: Colors.brown,
       forceElevated: true,
+      pinned: true,
       expandedHeight: 250.0,
       flexibleSpace: FlexibleSpaceBar(
-        title: Text(
-          'Parallax Effect',
-        ),
+        title: Text('Parallax Effect'),
         background: Image(
           image: AssetImage('assets/images/desk.jpg'),
           fit: BoxFit.cover,
